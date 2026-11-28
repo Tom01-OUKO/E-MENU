@@ -105,16 +105,7 @@
     </div>
 
     <script>
-        // 🛠️ LOCAL DATABASE: Bypasses CORS and loads instantly!
-        const mealDatabase = [
-            { idMeal: "52772", strMeal: "Teriyaki Chicken Casserole", strArea: "Japanese", strMealThumb: "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", strInstructions: "Preheat oven to 350° F. Spray a 9x13-inch baking pan with non-stick spray. Combine soy sauce, ½ cup water, brown sugar, ginger and garlic in a small saucepan and cover. Bring to a boil over medium heat. Remove lid and cook for one minute once boiling. Meanwhile, stir together the corn starch and 2 tablespoons of water in a separate dish until smooth. Once sauce is boiling, add mixture to the saucepan and stir to combine. Cook until the sauce starts to thicken then remove from heat. Place the chicken breasts in the prepared pan. Pour one cup of the sauce over top of chicken. Place chicken in oven and bake 35 minutes or until cooked through, basting occasionally with the sauce in the pan. Meanwhile, in a large skillet, combine the broccoli, carrots and ⅓ cup water. Bring to a boil, then reduce to a simmer. Cover and cook 5-7 minutes or until tender-crisp. Drain any remaining water. Remove chicken from oven and let rest for 5 minutes before slicing. Serve over rice with extra sauce.", strIngredient1: "Soy Sauce", strMeasure1: "3/4 cup", strIngredient2: "Water", strMeasure2: "1/2 cup", strIngredient3: "Brown Sugar", strMeasure3: "1/4 cup", strIngredient4: "Ground Ginger", strMeasure4: "1/2 teaspoon", strIngredient5: "Minced Garlic", strMeasure5: "1/2 teaspoon", strIngredient6: "Cornstarch", strMeasure6: "4 Tablespoons", strIngredient7: "Chicken Breasts", strMeasure7: "2", strIngredient8: "Broccoli", strMeasure8: "1 head", strIngredient9: "Carrots", strMeasure9: "1 cup" },
-            { idMeal: "52771", strMeal: "Spicy Arrabiata Penne", strArea: "Italian", strMealThumb: "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg", strInstructions: "Bring a large pot of water to a boil. Add penne and cook according to package directions. Meanwhile, heat oil in a large skillet over medium heat. Add garlic and cook until fragrant. Add tomatoes and red pepper flakes. Simmer for 10 minutes. Drain pasta and add to sauce. Toss with parsley and parmesan cheese.", strIngredient1: "Penne Rigate", strMeasure1: "1 pound", strIngredient2: "Olive Oil", strMeasure2: "2 tbs", strIngredient3: "Garlic", strMeasure3: "3 cloves", strIngredient4: "Chopped Tomatoes", strMeasure4: "1 can", strIngredient5: "Red Chilli Flakes", strMeasure5: "1 tsp", strIngredient6: "Parsley", strMeasure6: "Handful", strIngredient7: "Parmesan Cheese", strMeasure7: "To serve" },
-            { idMeal: "52785", strMeal: "Dal Fry", strArea: "Indian", strMealThumb: "https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg", strInstructions: "Wash and soak lentils for 30 mins. Boil with turmeric and salt until soft. In a pan heat ghee, add cumin seeds, ginger, garlic, onions and fry till golden. Add tomatoes and spices, cook till oil separates. Add the boiled dal and simmer for 10 minutes. Garnish with coriander.", strIngredient1: "Toor Dal", strMeasure1: "1 cup", strIngredient2: "Turmeric", strMeasure2: "1/2 tsp", strIngredient3: "Ghee", strMeasure3: "2 tbs", strIngredient4: "Cumin Seeds", strMeasure4: "1 tsp", strIngredient5: "Ginger", strMeasure5: "1 inch", strIngredient6: "Garlic", strMeasure6: "4 cloves", strIngredient7: "Onion", strMeasure7: "1 chopped", strIngredient8: "Tomato", strMeasure8: "2 chopped" },
-            { idMeal: "52765", strMeal: "Chicken Enchilada Casserole", strArea: "Mexican", strMealThumb: "https://www.themealdb.com/images/media/meals/qtuwxu1468232064.jpg", strInstructions: "Preheat oven to 350°F. In a large bowl, mix chicken, salsa, sour cream, and half the cheese. Layer tortillas, chicken mixture, and cheese in a baking dish. Bake for 30 minutes until bubbly.", strIngredient1: "Chicken", strMeasure1: "3 cups shredded", strIngredient2: "Salsa", strMeasure2: "2 cups", strIngredient3: "Sour Cream", strMeasure3: "1 cup", strIngredient4: "Cheese", strMeasure4: "3 cups", strIngredient5: "Tortillas", strMeasure5: "12" },
-            { idMeal: "52764", strMeal: "Garlic Butter Shrimp", strArea: "American", strMealThumb: "https://www.themealdb.com/images/media/meals/1529444830.jpg", strInstructions: "Melt butter in a large skillet over medium heat. Add garlic and cook for 1 minute. Add shrimp and cook until pink, about 3-4 minutes per side. Stir in lemon juice and parsley. Serve hot.", strIngredient1: "Shrimp", strMeasure1: "1 lb", strIngredient2: "Butter", strMeasure2: "1/2 cup", strIngredient3: "Garlic", strMeasure3: "4 cloves minced", strIngredient4: "Lemon Juice", strMeasure4: "1 tbs", strIngredient5: "Parsley", strMeasure5: "Garnish" },
-            { idMeal: "52763", strMeal: "Beef and Oyster Pie", strArea: "British", strMealThumb: "https://www.themealdb.com/images/media/meals/wrssvt1511556563.jpg", strInstructions: "Preheat oven to 200C. Brown the beef in a pan. Add onions and cook until soft. Stir in flour, then add stock and oysters. Simmer for 1 hour. Transfer to a pie dish, top with pastry, and bake for 30 minutes.", strIngredient1: "Beef", strMeasure1: "900g diced", strIngredient2: "Oysters", strMeasure2: "12", strIngredient3: "Onion", strMeasure3: "2", strIngredient4: "Beef Stock", strMeasure4: "500ml", strIngredient5: "Puff Pastry", strMeasure5: "500g" }
-        ];
-
+        const API_BASE = "https://www.themealdb.com/api/json/v1/1/";
         const mealGrid = document.getElementById('mealGrid');
         const statusMsg = document.getElementById('status-msg');
         const modalOverlay = document.getElementById('mealModal');
@@ -123,25 +114,26 @@
         function calculatePrice(id) { return (parseInt(id) * 15) + 150; }
         function formatKsh(amount) { return "KSh " + amount.toLocaleString(); }
 
-        function performSearch() {
-            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+        async function performSearch() {
+            const query = document.getElementById('searchInput').value.trim();
+            if (!query) return;
             statusMsg.style.display = 'flex';
             statusMsg.innerHTML = '<div class="spinner"></div> Searching for ' + query + '...';
             mealGrid.innerHTML = ''; 
 
-            setTimeout(() => {
-                const results = mealDatabase.filter(meal => 
-                    meal.strMeal.toLowerCase().includes(query) || 
-                    meal.strArea.toLowerCase().includes(query)
-                );
-
-                if (results.length === 0) {
+            try {
+                const response = await fetch(`${API_BASE}search.php?s=${query}`);
+                const data = await response.json();
+                if (!data.meals) {
                     statusMsg.innerHTML = "No meals found. Try searching for 'Chicken' or 'Beef'.";
                     return;
                 }
                 statusMsg.style.display = 'none';
-                renderMeals(results);
-            }, 500);
+                renderMeals(data.meals);
+            } catch (error) {
+                console.error("API Error:", error);
+                statusMsg.innerHTML = "Error connecting to the kitchen. Please check your internet.";
+            }
         }
 
         function renderMeals(meals) {
@@ -152,7 +144,7 @@
                 card.onclick = () => openModal(meal);
                 card.innerHTML = `
                     <div class="card-img-wrapper">
-                        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" loading="lazy">
+                        <img src="${meal.strMealThumb}/preview" alt="${meal.strMeal}" loading="lazy">
                     </div>
                     <div class="card-content">
                         <p class="card-title">${meal.strMeal}</p>
@@ -200,9 +192,11 @@
             if (e.target === modalOverlay) closeModal();
         });
 
+        // 🚀 REAL M-PESA ORDER FUNCTION
         async function orderMeal() {
             if (!currentMeal) return;
             const price = calculatePrice(currentMeal.idMeal);
+            
             let phone = prompt("Enter M-Pesa Phone Number (e.g., 254708374149):");
             if (!phone) return;
             if (!phone.startsWith("254")) {
@@ -216,12 +210,15 @@
             btn.disabled = true;
 
             try {
-                // ⚠️ PASTE YOUR ACTIVE NGROK URL HERE
-                const BACKEND_URL = "https://pacific-itinerary-excess.ngrok-free.dev/api/stkpush"; 
+                // ⚠️ IMPORTANT: REPLACE THIS WITH YOUR LIVE RENDER BACKEND URL
+                const BACKEND_URL = "https://e-menu-78f5.onrender.com/api/stkpush"; 
 
                 const response = await fetch(BACKEND_URL, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 'true' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true' 
+                    },
                     body: JSON.stringify({ phone: phone, amount: price })
                 });
 
